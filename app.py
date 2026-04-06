@@ -3,9 +3,16 @@ import sqlite3
 
 app = Flask(__name__)
 
+# Ruta raíz para probar que el servidor funciona
 @app.route("/")
 def home():
     return "Bot de Winie Deco funcionando en Render 🚀"
+
+# Más adelante podés agregar tu webhook acá
+@app.route("/webhook", methods=["POST"])
+def webhook():
+    # Lógica para procesar mensajes entrantes
+    return "Webhook recibido", 200
 
 
 QUESTIONS = {
