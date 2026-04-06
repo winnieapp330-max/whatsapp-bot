@@ -3,6 +3,11 @@ import sqlite3
 
 app = Flask(__name__)
 
+@app.route("/")
+def home():
+    return "Bot de Winie Deco funcionando en Render 🚀"
+
+
 QUESTIONS = {
     1: {
         "text": "Hola ¿Cómo estás? 👋\n¿Qué tipo de compra estás interesado en hacer en Winie Deco & Hogar?\n\n"
